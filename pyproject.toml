@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "statman"
+version = "0.1.0"
+description = "Call of Duty stats for discord"
+authors = ["Alex Ward <alxwrd@googlemail.com>"]
+
+[tool.poetry.dependencies]
+python = "3.9"
+"callofduty.py" = "^1.2.2"
+"discord.py" = "^1.7.1"
+maya = "^0.6.1"
+
+[tool.poetry.dev-dependencies]
+debugpy = "^1.2.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
