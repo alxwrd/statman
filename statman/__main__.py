@@ -1,6 +1,7 @@
+import os
 import random
 import json
-import getpass
+import pathlib
 
 import maya
 import discord
@@ -171,8 +172,8 @@ async def dropin(message):
 
 
 if __name__ == "__main__":
-    with open("details.json", "r") as f:
-        details = json.read(f)
+    with open(pathlib.Path(os.path.dirname(os.path.realpath(__file__)), "details.json"), "r") as f:
+        details = json.load(f)
     cod_username = details["cod_username"]
     cod_password = details["cod_password"]
     client.run(details["discord_token"])
